@@ -8,8 +8,28 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body ng-cloak>
-<div class="container">
-    
+<div class="container" ng-controller="QuestionListCtrl">
+    <h1 class="text-center">易企秀产品知识库快速查找系统</h1>
+    <form class="form form-horizontal quick-search">
+        <div class="form-group">
+            <label>关键字</label>
+            <input type="text" class="form-control" placeholder="关键字" ng-model="keywords"/>
+        </div>
+    </form>
+    <div class="questions-container">
+        <div class="question-answer" ng-repeat="question in questions | filter:keywords">
+            <h2>{{question.title}}</h2>
+            <div class="answers">
+                <ol>
+                    <li type="A" class="answer"
+                        ng-class="{'active': answer.result}"
+                        ng-repeat="answer in question.answer">
+                        {{answer.title}}
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/angular/angular.js"></script>
