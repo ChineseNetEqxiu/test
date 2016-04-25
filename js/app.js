@@ -1,5 +1,5 @@
 angular.module('test', [])
-    .controller('QuestionListCtrl', ['$scope', '$http', 'questions', function ($scope, $http, questions) {
+    .controller('QuestionListCtrl', ['$scope', '$http', 'questions', '$document', function ($scope, $http, questions, $document) {
         $scope.keywords = {title: ''};
         //$http.get('assets/qa.json')
         //    .then(function (res) {
@@ -7,6 +7,19 @@ angular.module('test', [])
         //    });
         $scope.questions = questions;
     }])
+    .directive('bindSlash', function () {
+        return function ($scope, $element) {
+            Mousetrap.bind('/', focusSearch);
+            function focusSearch() {
+                setTimeout(function () {
+                    $element.focus().select();
+                }, 0);
+            }
+            $scope.$on('$destroy', function () {
+                Mousetrap.unbind('/', focusSearch);
+            });
+        };
+    })
     .value('questions', [
         {
             "title": "1.	易企秀解决企业哪几个环节问题：",
