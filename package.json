@@ -17,6 +17,7 @@
     "mousetrap": "^1.5.3"
   },
   "devDependencies": {
+    "angular-sanitize": "^1.5.5",
     "concurrently": "^2.0.0",
     "live-server": "^1.0.0"
   }

@@ -1,4 +1,4 @@
-angular.module('test', ['questions', 'completions'])
+angular.module('test', ['questions', 'completions', 'ngSanitize'])
     .controller('QuestionListCtrl', ['$scope', '$http', 'questions', 'completions', function ($scope, $http, questions, completions) {
         $scope.keywords = {title: ''};
         //$http.get('assets/qa.json')

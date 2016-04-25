@@ -33,12 +33,13 @@
     <div class="completions-container">
         <div class="completions" ng-repeat="completion in completions | filter:keywords">
             <h2>{{completion.title}}</h2>
-            <p>{{completion.answer}}</p>
+            <p ng-bind-html="completion.answer"></p>
         </div>
     </div>
 </div>
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-sanitize/angular-sanitize.js"></script>
 <script src="node_modules/mousetrap/mousetrap.js"></script>
 <script src="js/questions.js"></script>
 <script src="js/completions.js"></script>
