@@ -13,20 +13,20 @@
     <form class="form form-horizontal quick-search">
         <div class="form-group">
             <label>关键字</label>
-            <input type="text" class="form-control" placeholder="关键字" ng-model="keywords"/>
+            <input type="text" class="form-control" placeholder="关键字" ng-model="keywords.title"/>
         </div>
     </form>
     <div class="questions-container">
         <div class="question-answer" ng-repeat="question in questions | filter:keywords">
             <h2>{{question.title}}</h2>
             <div class="answers">
-                <ol>
-                    <li type="A" class="answer"
+                <ul class="list-unstyled">
+                    <li class="answer"
                         ng-class="{'active': answer.result}"
                         ng-repeat="answer in question.answer">
                         {{answer.title}}
                     </li>
-                </ol>
+                </ul>
             </div>
         </div>
     </div>
