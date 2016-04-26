@@ -27,7 +27,7 @@
         </div>
     </form>
     <div class="questions-container">
-        <div class="question-answer" ng-repeat="question in questions | filter:keywords">
+        <div class="question-answer note info" ng-repeat="question in questions | filter:keywords">
             <h2>{{question.title}}</h2>
             <div class="answers">
                 <ul class="list-unstyled">
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="completions-container">
-        <div class="completions" ng-repeat="completion in completions | filter:keywords">
+        <div class="completions note info" ng-repeat="completion in completions | filter:keywords">
             <h2>{{completion.title}}</h2>
             <p ng-bind-html="completion.answer"></p>
         </div>
