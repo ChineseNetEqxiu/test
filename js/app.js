@@ -7,6 +7,7 @@ angular.module('test', ['questions', 'completions', 'ngSanitize'])
         //    });
         $scope.questions = questions;
         $scope.completions = completions;
+        $scope.answerOnly = false;
     }])
     .directive('bindSlash', function () {
         return function ($scope, $element) {

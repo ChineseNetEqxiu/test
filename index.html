@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--<link rel="stylesheet" href="node_modules/angular/angular-csp.css"/>-->
     <link href="//cdn.bootcss.com/angular.js/1.5.0/angular-csp.css" rel="stylesheet">
-    <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>-->
     <link rel="stylesheet" href="css/style.css"/>
 </head>
@@ -21,6 +21,10 @@
             <label>关键字</label>
             <input type="text" class="form-control" placeholder="点击输入框，或键入'/'，录入关键字" ng-model="keywords.title" bind-slash/>
         </div>
+        <div class="form-group">
+            <label>只显示答案</label>
+            <input type="checkbox" ng-model="answerOnly">
+        </div>
     </form>
     <div class="questions-container">
         <div class="question-answer" ng-repeat="question in questions | filter:keywords">
@@ -29,6 +33,7 @@
                 <ul class="list-unstyled">
                     <li class="answer"
                         ng-class="{'active': answer.result}"
+                        ng-show="!answerOnly || answer.result"
                         ng-repeat="answer in question.answer">
                         {{answer.title}}
                     </li>
