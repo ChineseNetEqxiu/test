@@ -13,6 +13,7 @@ angular.module('test', ['questions', 'completions', 'ngSanitize'])
         function enableSupermanMode() {
             var $keywords = $('#keywords');
             $keywords.attr('ng-model', 'keywords.title')
+                .attr('bind-slash', 'true')
                 .attr('placeholder', '点击输入框，或键入\'\/\'，录入关键字（超人模式开启）')
                 .removeAttr('readonly');
             $compile($keywords)($scope);
