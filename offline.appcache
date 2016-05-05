@@ -1,18 +1,8 @@
 CACHE MANIFEST
-# 2016-05-03
+# 2016-05-05
 
 CACHE:
-index.html
-//cdn.bootcss.com/angular.js/1.5.0/angular-csp.css
-//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css
-css/style.css
-//cdn.bootcss.com/jquery/2.0.3/jquery.min.js
-//cdn.bootcss.com/angular.js/1.2.23/angular.min.js
-//cdn.bootcss.com/angular.js/1.2.23/angular-sanitize.min.js
-//cdn.bootcss.com/mousetrap/1.4.6/mousetrap.min.js
-js/questions.js
-js/completions.js
-js/app.js
+
 
 NETWORK:
 *
