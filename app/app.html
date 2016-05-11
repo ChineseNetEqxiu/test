@@ -1,0 +1,32 @@
+<form class="form form-horizontal quick-search">
+    <div class="form-group">
+        <label>关键字</label>
+        <!--<input type="text" id="keywords" class="form-control" readonly placeholder="点击输入框，或键入'/'，录入关键字（关键词查询功能已被官方下架）"/>-->
+        <input type="text" class="form-control" placeholder="点击输入框，或键入'/'，录入关键字" [(ngModel)]="keywords" (keyup)="filterQuestions()"/>
+    </div>
+    <div class="form-group">
+        <label>只显示答案</label>
+        <input type="checkbox" [(ngModel)]="answerOnly">
+    </div>
+</form>
+<div class="questions-container">
+    <div *ngFor="#question of questions" class="question-answer note info">
+        <h2>{{question.title}}</h2>
+        <div class="answers">
+            <ul class="list-unstyled">
+                <li class="answer"
+                    [ngClass]="{'active': answer.result}"
+                    [style.display]="(!answerOnly || answer.result)?'block': 'none'"
+                    *ngFor="#answer of question.answer">
+                    {{answer.title}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="completions-container">
+    <div *ngFor="#completion of completions" class="completions note info" >
+        <h2>{{completion.title}}</h2>
+        <p [innerHTML]="completion.answer"></p>
+    </div>
+</div>
