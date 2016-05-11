@@ -1,4 +1,12 @@
-export var questions = [
+export interface Answer {
+    title: String;
+    result: Boolean
+}
+export interface Question {
+    title: String;
+    answer: Array<Answer>
+}
+export var questions: Array<Question> = [
     {
         "title": "1.	易企秀解决企业哪几个环节问题：",
         "answer": [

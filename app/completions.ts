@@ -1,4 +1,8 @@
-export var completions = [
+export interface Completion {
+    title: String;
+    answer: String
+}
+export var completions: Array<Completion> = [
     {
         "title": "101.	如何为图片设置动画：",
         "answer": "选中图片----组件设置框：动画-----添加动画"

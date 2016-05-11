@@ -1,17 +1,14 @@
-import {questions} from './questions';
-import {completions} from './completions';
+import {questions, Question} from './questions';
+import {completions, Completion} from './completions';
 import {bootstrap} from 'angular2/platform/browser';
 import {Component} from 'angular2/core';
 @Component({
     selector: 'app',
-    providers: [],
     templateUrl: 'app/app.html',
-    directives: [],
-    pipes: []
 })
 export class App {
-    questions: any;
-    completions: any;
+    questions: Array<Question>;
+    completions: Completion[];
     answerOnly: Boolean;
     title: String;
     constructor() {
