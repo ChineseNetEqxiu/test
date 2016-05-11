@@ -6,7 +6,7 @@ import {Component} from 'angular2/core';
     selector: 'app',
     templateUrl: 'app/app.html',
 })
-export class App {
+class App {
     questions: Array<Question>;
     completions: Completion[];
     answerOnly: Boolean;
