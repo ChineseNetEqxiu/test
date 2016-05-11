@@ -10,12 +10,17 @@ export class App {
     questions: Array<Question>;
     completions: Completion[];
     answerOnly: Boolean;
-    title: String;
+    keywords: String;
     constructor() {
         this.questions = questions;
         this.completions = completions;
-        this.title = "";
+        this.keywords = "";
         this.answerOnly = false;
+    }
+    filterQuestions() {
+        var reg = new RegExp(this.keywords);
+        this.questions = questions.filter(question => question.title.match(reg));
+        this.completions = completions.filter(completion => completion.title.match(reg));
     }
 }
 
