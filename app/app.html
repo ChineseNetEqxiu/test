@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="text-center">易企秀产品知识库</h1>
+    <p style="color: red;">注：未明确注明产品端题目，均以国内网页端易企秀产品为准;
+        任何题目，答案以易企秀制作场景流畅、正常使用为原则;
+        正确答案，优先以易企秀线上、对外宣传内容为依据。</p>
+    <form class="form form-horizontal quick-search">
+        <div class="form-group">
+            <label>关键字</label>
+            <!--<input type="text" id="keywords" class="form-control" readonly placeholder="点击输入框，或键入'/'，录入关键字（关键词查询功能已被官方下架）"/>-->
+            <input type="text" class="form-control" placeholder="点击输入框，或键入'/'，录入关键字" [(ngModel)]="title"/>
+        </div>
+        <div class="form-group">
+            <label>只显示答案</label>
+            <input type="checkbox" [(ngModel)]="answerOnly">
+        </div>
+    </form>
+    <div class="questions-container">
+
+    </div>
+    <div class="completions-container">
+        <div class="completions note info">
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>
+</div>

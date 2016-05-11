@@ -1,64 +1,46 @@
 <!DOCTYPE html>
-<html ng-app="test" manifest="offline.appcache">
+<html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>易企秀产品知识库</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--<link rel="stylesheet" href="node_modules/angular/angular-csp.css"/>-->
-    <link href="//cdn.bootcss.com/angular.js/1.5.0/angular-csp.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>-->
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <!--<script src="//cdn.bootcss.com/systemjs/0.19.27/system-polyfills.js"></script>-->
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <!--<script src="//cdn.bootcss.com/angular.js/2.0.0-beta.17/angular2-polyfills.min.js"></script>-->
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <!--<script src="//cdn.bootcss.com/systemjs/0.19.27/system.js"></script>-->
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!--<script src="//cdn.bootcss.com/typescript/1.9.0/typescript.js"></script>-->
+    <script src="node_modules/typescript/lib/typescript.js"></script>
+    <!--<script src="//cdn.bootcss.com/mousetrap/1.4.6/mousetrap.min.js"></script>-->
+    <script src="node_modules/mousetrap/mousetrap.js"></script>
+
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <!--<script src="//cdn.bootcss.com/angular.js/2.0.0-beta.17/angular2.dev.js"></script>-->
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: {
+                emitDecoratorMetadata: true
+            },
+            packages: {
+                'app': {
+                    defaultExtension: 'ts'
+                }
+            }
+        });
+
+        System.import('app/app').catch(function(err){
+            console.error(err);
+        });
+    </script>
 </head>
-<body ng-cloak>
-<div class="container" ng-controller="QuestionListCtrl">
-    <h1 class="text-center">易企秀产品知识库</h1>
-    <p style="color: red;">注：未明确注明产品端题目，均以国内网页端易企秀产品为准;
-        任何题目，答案以易企秀制作场景流畅、正常使用为原则;
-        正确答案，优先以易企秀线上、对外宣传内容为依据。</p>
-    <form class="form form-horizontal quick-search">
-        <div class="form-group">
-            <label>关键字</label>
-            <!--<input type="text" id="keywords" class="form-control" readonly placeholder="点击输入框，或键入'/'，录入关键字（关键词查询功能已被官方下架）"/>-->
-            <input type="text" class="form-control" placeholder="点击输入框，或键入'/'，录入关键字" ng-model="keywords.title" bind-slash/>
-        </div>
-        <div class="form-group">
-            <label>只显示答案</label>
-            <input type="checkbox" ng-model="answerOnly">
-        </div>
-    </form>
-    <div class="questions-container">
-        <div class="question-answer note info" ng-repeat="question in questions | filter:keywords">
-            <h2>{{question.title}}</h2>
-            <div class="answers">
-                <ul class="list-unstyled">
-                    <li class="answer"
-                        ng-class="{'active': answer.result}"
-                        ng-show="!answerOnly || answer.result"
-                        ng-repeat="answer in question.answer">
-                        {{answer.title}}
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="completions-container">
-        <div class="completions note info" ng-repeat="completion in completions | filter:keywords">
-            <h2>{{completion.title}}</h2>
-            <p ng-bind-html="completion.answer"></p>
-        </div>
-    </div>
-</div>
-<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
-<!--<script src="node_modules/jquery/dist/jquery.js"></script>-->
-<script src="//cdn.bootcss.com/angular.js/1.2.23/angular.min.js"></script>
-<!--<script src="node_modules/angular/angular.js"></script>-->
-<script src="//cdn.bootcss.com/angular.js/1.2.23/angular-sanitize.min.js"></script>
-<!--<script src="node_modules/angular-sanitize/angular-sanitize.js"></script>-->
-<script src="//cdn.bootcss.com/mousetrap/1.4.6/mousetrap.min.js"></script>
-<!--<script src="node_modules/mousetrap/mousetrap.js"></script>-->
-<script src="js/questions.js"></script>
-<script src="js/completions.js"></script>
-<script src="js/app.js"></script>
+<body>
+    <app></app>
 </body>
 </html>
