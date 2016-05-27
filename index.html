@@ -71,10 +71,10 @@
 <script src="js/app.js"></script>
 <script>
     var deepShareAppId = 'f2976f2a785e0fad',
-            deepShareFolioJSON = {
-                inapp_data: JSON.stringify({"title": "六一儿童节", "code": "c46Onb9A", "sceneId": "42715008"})
-            };
-    $.post('https://fds.so/v2/url/' + deepShareAppId, deepShareFolioJSON, function (result) {
+            deepShareFolioJSONStr = JSON.stringify({
+                inapp_data: {"title": "六一儿童节", "code": "c46Onb9A", "sceneId": "42715008"}
+            });
+    $.post('https://fds.so/v2/url/' + deepShareAppId, deepShareFolioJSONStr, function (result) {
         $('#deepShare').attr('href', result.url);
     }).error(function () {
         //Do your own bussiness logic in case that our servive is down.
