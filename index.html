@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>易企秀产品知识库</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--<link rel="stylesheet" href="node_modules/angular/angular-csp.css"/>-->
     <link href="//cdn.bootcss.com/angular.js/1.5.0/angular-csp.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
@@ -13,23 +13,31 @@
 <body ng-cloak>
 <div class="container" ng-controller="QuestionListCtrl">
     <h1 class="text-center">易企秀产品知识库</h1>
+
     <p style="color: red;">注：未明确注明产品端题目，均以国内网页端易企秀产品为准;
         任何题目，答案以易企秀制作场景流畅、正常使用为原则;
         正确答案，优先以易企秀线上、对外宣传内容为依据。</p>
+
     <form class="form form-horizontal quick-search">
         <div class="form-group">
             <label>关键字</label>
             <!--<input type="text" id="keywords" class="form-control" readonly placeholder="点击输入框，或键入'/'，录入关键字（关键词查询功能已被官方下架）"/>-->
-            <input type="text" class="form-control" placeholder="点击输入框，或键入'/'，录入关键字" ng-model="keywords.title" bind-slash/>
+            <input type="text" class="form-control" placeholder="点击输入框，或键入'/'，录入关键字" ng-model="keywords.title"
+                   bind-slash/>
         </div>
         <div class="form-group">
             <label>只显示答案</label>
             <input type="checkbox" ng-model="answerOnly">
         </div>
+        <div class="form-group">
+            <label>Deepshare Test</label>
+            <a id="deepShare">DeepShare</a>
+        </div>
     </form>
     <div class="questions-container">
         <div class="question-answer note info" ng-repeat="question in questions | filter:keywords">
             <h2>{{question.title}}</h2>
+
             <div class="answers">
                 <ul class="list-unstyled">
                     <li class="answer"
@@ -45,6 +53,7 @@
     <div class="completions-container">
         <div class="completions note info" ng-repeat="completion in completions | filter:keywords">
             <h2>{{completion.title}}</h2>
+
             <p ng-bind-html="completion.answer"></p>
         </div>
     </div>
@@ -60,5 +69,16 @@
 <script src="js/questions.js"></script>
 <script src="js/completions.js"></script>
 <script src="js/app.js"></script>
+<script>
+    var deepShareAppId = 'f2976f2a785e0fad',
+            deepShareFolioJSONStr = JSON.stringify({
+                inapp_data: JSON.stringify({"title": "六一儿童节", "code": "c46Onb9A", "sceneId": "42715008"})
+            });
+    $.post('https://fds.so/v2/url/' + deepShareAppId, deepShareFolioJSONStr, function (result) {
+        $('#deepShare').attr('href', result.url);
+    }).error(function () {
+        //Do your own bussiness logic in case that our servive is down.
+    });
+</script>
 </body>
 </html>
