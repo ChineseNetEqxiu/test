@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>-->
     <link rel="stylesheet" href="css/style.css"/>
+    <METAHTTP-EQUIV="Pragma"CONTENT="no-cache">
+        <METAHTTP-EQUIV="Cache-Control"CONTENT="no-cache">
+            <METAHTTP-EQUIV="Expires"CONTENT="0">
 </head>
 <body ng-cloak>
 <div class="container" ng-controller="QuestionListCtrl">
@@ -80,16 +83,6 @@
     }).error(function () {
         //Do your own bussiness logic in case that our servive is down.
     });
-    //deepshare appId
-    var deepShareAppId = '7b0df317d0b78c42',
-    deepShareFolioJSONStr = JSON.stringify({
-                                           inapp_data: {"title": "六一儿童节", "code": "c46Onb9A", "sceneId": "42715008"}
-                                           });
-                                           $.post('https://fds.so/v2/url/' + deepShareAppId, deepShareFolioJSONStr, function (result) {
-                                                  $('#deepShare').attr('href', result.url);
-                                                  }).error(function () {
-                                                           //Do your own bussiness logic in case that our servive is down.
-                                                           });
 </script>
 </body>
 </html>
