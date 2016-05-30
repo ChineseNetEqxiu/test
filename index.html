@@ -1,19 +1,95 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1348.17">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Arial; color: #323333; -webkit-text-stroke: #323333}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; color: #2d64b3; -webkit-text-stroke: 0px #2d64b3}
-    span.s3 {font: 14.0px 'Heiti SC Light'; font-kerning: none}
-  </style>
+<!DOCTYPE html>
+<html ng-app="test" manifest="offline.appcache">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>易企秀产品知识库</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--<link rel="stylesheet" href="node_modules/angular/angular-csp.css"/>-->
+    <link href="//cdn.bootcss.com/angular.js/1.5.0/angular-csp.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>-->
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;html&gt;&lt;head&gt;&lt;script&gt;<a href="https://www.baidu.com/s?wd=window.open&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWnkrj6LnANhujfkrjn0IAYqnWm3PW64rj0d0AP8IA3qPjfsn1bkrjKxmLKz0ZNzUjdCIZwsrBtEXh9GuA7EQhF9pywdQhPEUiqkIyN1IA-EUBtvnHm1n1n4rHc4rHfYrHm4n1c"><span class="s2">window.open</span></a>('../index.asp','</span><span class="s3">网页特效</span><span class="s1">','toolbar=no,status=no,scrollbars=yes,left=100,top=50,width=250,height=50')&lt;/script&gt;&lt;title&gt;</span><span class="s3">随同主窗口同时弹出的附加小窗口</span><span class="s1">&lt;/title&gt;&lt;meta content="text/html; charset=gb2312" http-equiv="Content-Type"&gt;&lt;style type="text/css"&gt;.head { COLOR: white; FONT-SIZE: 12px}.text { COLOR: #4a5284; FONT-SIZE: 12px; LINE-HEIGHT: 20px}.info { FONT-SIZE: 12px; LINE-HEIGHT: 20px}A { COLOR: #4a5284; FONT-SIZE: 12px; TEXT-DECORATION: none}A:hover { COLOR: #ff7222; FONT-SIZE: 12px; TEXT-DECORATION: underline}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;table border="0" cellPadding="0" cellSpacing="0" width="100%" height="168"&gt;&lt;TBODY&gt; &lt;tr&gt; &lt;/tr&gt; &lt;tr&gt; &lt;/tr&gt; &lt;tr&gt; &lt;/tr&gt;&lt;/TBODY&gt;&lt;/table&gt;&lt;table bgColor="#7e85b7" border="1" borderColorDark="#663300" borderColorLight="#ffffff"cellPadding="1" cellSpacing="2" class="head" width="100%"&gt;&lt;TBODY&gt; &lt;tr align="middle"&gt; &lt;/tr&gt;&lt;/TBODY&gt;&lt;/table&gt;&lt;table border="0" cellPadding="0" cellSpacing="0" width="100%"&gt;&lt;TBODY&gt; &lt;tr&gt; &lt;td&gt;&lt;table align="center" border="0" cellPadding="0" cellSpacing="0" class="text" width="482"&gt;&lt;TBODY&gt; &lt;tr&gt; &lt;td width="482"&gt;&lt;dl&gt; &lt;dd align="center"&gt;&lt;br&gt; &lt;font face="</span><span class="s3">隶书</span><span class="s1">" size="5" color="#0000FF"&gt;</span><span class="s3">随同主窗口同时弹出的附加小窗口</span><span class="s1">&lt;/font&gt;&lt;br&gt; &lt;/dd&gt; &lt;p&gt; </span><span class="s3">打开一个窗口时自动弹出一个附加的小窗口，表示新消息公告、重要提示信息、当然，如果如果你是在用一些网站提供的<a href="https://www.baidu.com/s?wd=%E5%85%8D%E8%B4%B9%E7%A9%BA%E9%97%B4&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWnkrj6LnANhujfkrjn0IAYqnWm3PW64rj0d0AP8IA3qPjfsn1bkrjKxmLKz0ZNzUjdCIZwsrBtEXh9GuA7EQhF9pywdQhPEUiqkIyN1IA-EUBtvnHm1n1n4rHc4rHfYrHm4n1c"><span class="s2">免费空间</span></a>做主页的话，一般要设置这样一个小窗口加入空间提供者的一些连接消息，如现在<a href="https://www.baidu.com/s?wd=%E7%BD%91%E6%98%93&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWnkrj6LnANhujfkrjn0IAYqnWm3PW64rj0d0AP8IA3qPjfsn1bkrjKxmLKz0ZNzUjdCIZwsrBtEXh9GuA7EQhF9pywdQhPEUiqkIyN1IA-EUBtvnHm1n1n4rHc4rHfYrHm4n1c"><span class="s2">网易</span></a>就是这样做的，</span><span class="s1">&lt;font face="</span><span class="s3">宋体</span><span class="s1">"&gt;</span><span class="s3">弹出的附加小窗口有各种形式，如没有工具栏的、没有滚动条的，其实制作并不难，</span><span class="s1">&lt;/font&gt;</span><span class="s3">这里，将有关方法全盘提供，你可以重新加载本页，或单击工具栏按钮</span><span class="s1">“</span><span class="s3">刷新</span><span class="s1">”</span><span class="s3">，试一下，效果还不错吧！</span><span class="s1">&lt;/p&gt; &lt;p&gt; </span><span class="s3">点击一个链接新开一个窗口</span><span class="s1">,</span><span class="s3">而新开的窗口又与一般的浏览器窗口不同</span><span class="s1">,</span><span class="s3">看起来挺简洁清爽的</span><span class="s1">? &lt;br&gt; </span><span class="s3">其实这不怎么复杂</span><span class="s1">,</span><span class="s3">用</span><span class="s1">script</span><span class="s3">语言的一个函数就可以了</span><span class="s1">,</span><span class="s3">这就是</span><span class="s1">window</span><span class="s3">对象的</span><span class="s1">open</span><span class="s3">函数</span><span class="s1">,</span><span class="s3">给大家详细讲一下这个函数的具体用法吧</span><span class="s1">! &lt;br&gt; 1</span><span class="s3">、开窗口：</span><span class="s1"> &lt;br&gt; var hWnd=<a href="https://www.baidu.com/s?wd=window.open&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWnkrj6LnANhujfkrjn0IAYqnWm3PW64rj0d0AP8IA3qPjfsn1bkrjKxmLKz0ZNzUjdCIZwsrBtEXh9GuA7EQhF9pywdQhPEUiqkIyN1IA-EUBtvnHm1n1n4rHc4rHfYrHm4n1c"><span class="s2">window.open</span></a>('</span><span class="s3">文件</span><span class="s1">URL','</span><span class="s3">窗口名称</span><span class="s1">','</span><span class="s3">窗口特性选项</span><span class="s1">'),</span><span class="s3">现一一讲述</span><span class="s1"> &lt;br&gt; hWnd</span><span class="s3">：如果熟悉</span><span class="s1">window</span><span class="s3">编程的话，对它并不陌生，它表示<a href="https://www.baidu.com/s?wd=%E7%AA%97%E5%8F%A3%E5%8F%A5%E6%9F%84&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWnkrj6LnANhujfkrjn0IAYqnWm3PW64rj0d0AP8IA3qPjfsn1bkrjKxmLKz0ZNzUjdCIZwsrBtEXh9GuA7EQhF9pywdQhPEUiqkIyN1IA-EUBtvnHm1n1n4rHc4rHfYrHm4n1c"><span class="s2">窗口句柄</span></a>，代表窗口对象，进行<a href="https://www.baidu.com/s?wd=%E8%84%9A%E6%9C%AC%E7%BC%96%E7%A8%8B&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWnkrj6LnANhujfkrjn0IAYqnWm3PW64rj0d0AP8IA3qPjfsn1bkrjKxmLKz0ZNzUjdCIZwsrBtEXh9GuA7EQhF9pywdQhPEUiqkIyN1IA-EUBtvnHm1n1n4rHc4rHfYrHm4n1c"><span class="s2">脚本编程</span></a>时很有用，通过它可实现在父窗口中实现对子窗口的控制。</span><span class="s1"> &lt;br&gt; </span><span class="s3">文件</span><span class="s1">URL</span><span class="s3">：表示欲打开文件的</span><span class="s1">URL</span><span class="s3">地址，如果打开文件在本地服务器可用<a href="https://www.baidu.com/s?wd=%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWnkrj6LnANhujfkrjn0IAYqnWm3PW64rj0d0AP8IA3qPjfsn1bkrjKxmLKz0ZNzUjdCIZwsrBtEXh9GuA7EQhF9pywdQhPEUiqkIyN1IA-EUBtvnHm1n1n4rHc4rHfYrHm4n1c"><span class="s2">相对路径</span></a>，否则就必须用</span><span class="s1">URL</span><span class="s3">路径。</span><span class="s1"> &lt;br&gt; </span><span class="s3">窗口名称：表示打开窗口的名称，这个参数可要可不要，不过如果你用<a href="https://www.baidu.com/s?wd=%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWnkrj6LnANhujfkrjn0IAYqnWm3PW64rj0d0AP8IA3qPjfsn1bkrjKxmLKz0ZNzUjdCIZwsrBtEXh9GuA7EQhF9pywdQhPEUiqkIyN1IA-EUBtvnHm1n1n4rHc4rHfYrHm4n1c"><span class="s2">脚本语言</span></a>进行编程需要在两个窗口之间传递一些信息或参数时就需要了，我们可用</span><span class="s1">window.name</span><span class="s3">来取这个传递的参数值。</span><span class="s1"> &lt;br&gt; </span><span class="s3">窗口特性选项其书写格式为：</span><span class="s1">option1=</span><span class="s3">值</span><span class="s1">,option2=</span><span class="s3">值</span><span class="s1">,option3=</span><span class="s3">值</span><span class="s1"> &lt;br&gt; </span><span class="s3">特性值主要有以下这些</span><span class="s1">: &lt;/p&gt; &lt;p&gt;</span><span class="s3">选项</span><span class="s1"> </span><span class="s3">数值</span><span class="s1"> </span><span class="s3">意义</span><span class="s1"> &lt;br&gt; toolbar yes/no </span><span class="s3">窗口是否有工具栏</span><span class="s1"> &lt;br&gt; location yes/no </span><span class="s3">窗口是否显示地址栏</span><span class="s1"> &lt;br&gt; directories yes/no </span><span class="s3">窗口是否提供目录按钮</span><span class="s1"> &lt;br&gt; status yes/no </span><span class="s3">窗口底部是否显示状态栏</span><span class="s1"> &lt;br&gt; menubar yes/no </span><span class="s3">窗口是否有菜单栏</span><span class="s1"> &lt;br&gt; scrollbars yes/no </span><span class="s3">当内容显示不完时，窗口是否允许出现滚动条</span><span class="s1"> &lt;br&gt; resizable yes/no </span><span class="s3">窗口是否允许被缩放</span><span class="s1"> &lt;br&gt; width </span><span class="s3">整数值</span><span class="s1">(Integer) </span><span class="s3">窗口的宽度</span><span class="s1"> &lt;br&gt; height </span><span class="s3">整数值</span><span class="s1">(Integer) </span><span class="s3">窗口的高度</span><span class="s1"> &lt;br&gt; left </span><span class="s3">整数值</span><span class="s1">(Integer) </span><span class="s3">窗口离屏幕左边的距离即坐标</span><span class="s1">X(</span><span class="s3">屏幕左上角坐标为</span><span class="s1">0,0) &lt;br&gt; top </span><span class="s3">整数值</span><span class="s1">(Integer) </span><span class="s3">窗口离屏幕顶部的距离即坐标</span><span class="s1">Y &lt;/p&gt; &lt;p&gt; </span><span class="s3">好了，上边的特性值中最常用的有</span><span class="s1">Toolbar,scrollbars,width,heigth,top,left</span><span class="s3">等，你不妨一个一个试试看，举一个例</span><span class="s1">(</span><span class="s3">用</span><span class="s1">Javascript</span><span class="s3">编写</span><span class="s1">)</span><span class="s3">：</span><span class="s1"> &lt;br&gt; var myWindow=window.open('test.html','</span><span class="s3">网页陶吧</span><span class="s1">', 'toolbar=no,status=no,scrollbars=yes,left=100,top=50,width=500,height=450') &lt;br&gt; 2</span><span class="s3">、关闭窗口：</span><span class="s1"> &lt;br&gt; </span><span class="s3">如果你在当前窗口关闭自己，用</span><span class="s1">window</span><span class="s3">对象的</span><span class="s1">close</span><span class="s3">函数就可以了</span><span class="s1"> &lt;br&gt; </span><span class="s3">格式为：</span><span class="s1">window.close() &lt;br&gt; </span><span class="s3">如果是在父窗口关闭子窗口，其格式为</span><span class="s1"> &lt;br&gt; </span><span class="s3">用子<a href="https://www.baidu.com/s?wd=%E7%AA%97%E5%8F%A3%E5%8F%A5%E6%9F%84&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWnkrj6LnANhujfkrjn0IAYqnWm3PW64rj0d0AP8IA3qPjfsn1bkrjKxmLKz0ZNzUjdCIZwsrBtEXh9GuA7EQhF9pywdQhPEUiqkIyN1IA-EUBtvnHm1n1n4rHc4rHfYrHm4n1c"><span class="s2">窗口句柄</span></a></span><span class="s1">.close() &lt;br&gt; </span><span class="s3">如关闭上边举例所开的窗口则可用</span><span class="s1">:myWindow.close() &lt;br&gt; </span><span class="s3">至于点击一个链接打开一个新窗口，有一点要注意链接标志不仅可以<a href="https://www.baidu.com/s?wd=%E9%93%BE%E6%8E%A5%E6%96%87%E4%BB%B6&amp;tn=44039180_cpr&amp;fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWnkrj6LnANhujfkrjn0IAYqnWm3PW64rj0d0AP8IA3qPjfsn1bkrjKxmLKz0ZNzUjdCIZwsrBtEXh9GuA7EQhF9pywdQhPEUiqkIyN1IA-EUBtvnHm1n1n4rHc4rHfYrHm4n1c"><span class="s2">链接文件</span></a>，还可以链接</span><span class="s1">Script</span><span class="s3">语句哟。</span><span class="s1"> &lt;br&gt; &lt;/p&gt; &lt;/dl&gt; &lt;/td&gt; &lt;/tr&gt;&lt;/TBODY&gt; &lt;/table&gt; &lt;/td&gt; &lt;/tr&gt;&lt;/TBODY&gt;&lt;/table&gt;&lt;p align="center"&gt;&lt;br&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</span></p>
+<body ng-cloak>
+<div class="container" ng-controller="QuestionListCtrl">
+    <h1 class="text-center">易企秀产品知识库</h1>
+
+    <p style="color: red;">注：未明确注明产品端题目，均以国内网页端易企秀产品为准;
+        任何题目，答案以易企秀制作场景流畅、正常使用为原则;
+        正确答案，优先以易企秀线上、对外宣传内容为依据。</p>
+
+    <form class="form form-horizontal quick-search">
+        <div class="form-group">
+            <label>关键字</label>
+            <!--<input type="text" id="keywords" class="form-control" readonly placeholder="点击输入框，或键入'/'，录入关键字（关键词查询功能已被官方下架）"/>-->
+            <input type="text" class="form-control" placeholder="点击输入框，或键入'/'，录入关键字" ng-model="keywords.title"
+                   bind-slash/>
+        </div>
+        <div class="form-group">
+            <label>只显示答案</label>
+            <input type="checkbox" ng-model="answerOnly">
+        </div>
+        <div class="form-group">
+            <label>Deepshare Test</label>
+            <a id="deepShare">DeepShare</a>
+        </div>
+    </form>
+    <div class="questions-container">
+        <div class="question-answer note info" ng-repeat="question in questions | filter:keywords">
+            <h2>{{question.title}}</h2>
+
+            <div class="answers">
+                <ul class="list-unstyled">
+                    <li class="answer"
+                        ng-class="{'active': answer.result}"
+                        ng-show="!answerOnly || answer.result"
+                        ng-repeat="answer in question.answer">
+                        {{answer.title}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="completions-container">
+        <div class="completions note info" ng-repeat="completion in completions | filter:keywords">
+            <h2>{{completion.title}}</h2>
+
+            <p ng-bind-html="completion.answer"></p>
+        </div>
+    </div>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+<!--<script src="node_modules/jquery/dist/jquery.js"></script>-->
+<script src="//cdn.bootcss.com/angular.js/1.2.23/angular.min.js"></script>
+<!--<script src="node_modules/angular/angular.js"></script>-->
+<script src="//cdn.bootcss.com/angular.js/1.2.23/angular-sanitize.min.js"></script>
+<!--<script src="node_modules/angular-sanitize/angular-sanitize.js"></script>-->
+<script src="//cdn.bootcss.com/mousetrap/1.4.6/mousetrap.min.js"></script>
+<!--<script src="node_modules/mousetrap/mousetrap.js"></script>-->
+<script src="js/questions.js"></script>
+<script src="js/completions.js"></script>
+<script src="js/app.js"></script>
+<script>
+    //deepshare appId
+    var deepShareAppId = '7b0df317d0b78c42',
+            deepShareFolioJSONStr = JSON.stringify({
+                inapp_data: {"title": "六一儿童节", "code": "c46Onb9A", "sceneId": "42715008"}
+            });
+    $.post('https://fds.so/v2/url/' + deepShareAppId, deepShareFolioJSONStr, function (result) {
+        $('#deepShare').attr('href', result.url);
+    }).error(function () {
+        //Do your own bussiness logic in case that our servive is down.
+    });
+    //deepshare appId
+    var deepShareAppId = '7b0df317d0b78c42',
+    deepShareFolioJSONStr = JSON.stringify({
+                                           inapp_data: {"title": "六一儿童节", "code": "c46Onb9A", "sceneId": "42715008"}
+                                           });
+                                           $.post('https://fds.so/v2/url/' + deepShareAppId, deepShareFolioJSONStr, function (result) {
+                                                  $('#deepShare').attr('href', result.url);
+                                                  }).error(function () {
+                                                           //Do your own bussiness logic in case that our servive is down.
+                                                           });
+</script>
 </body>
 </html>
